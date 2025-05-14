@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Sweet Loaf</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url('bgimg.jpg');
+      background-height:100%;
+      background-width:100%;
+      background-position: center;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      color: #2d3b2d;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* White overlay to lighten the background image */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8	); /* 0.4 = 40% opacity */
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Container to sit above the overlay */
+    .background-container {
+      position: relative;
+      z-index: 1;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    header {
+      background-color: #486e4b;
+      color: #f4f4f4;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    .hero {
+      background-image: url('hero-image.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f4f4f4;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      background-color: rgba(0,0,0,0.5);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #486e4b;
+    }
+
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .category-card {
+      background-color: #e8f0e8;
+      border-radius: 10px;
+      padding: 1rem;
+      width: 200px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 1rem;
+    }
+
+    .product-info h3 {
+      margin-bottom: 0.5rem;
+      color: #486e4b;
+    }
+
+    .product-info p {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-info span {
+      font-weight: bold;
+      color: #789f80;
+    }
+
+    .about {
+      background-color: #e8f0e8;
+      border-radius: 0px;
+      text-align: center;
+      box-shadow:rgba(0,0,0,0.1);
+    }
+
+    .contact {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .contact p {
+      margin: 0.5rem 0;
+    }
+
+    footer {
+      background-color: #486e4b;
+      color: #f4f4f4;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background-container">
+
+    <header>
+      <h1>The Sweet Loaf</h1>
+      <p>Let The Taste Speak – 100% Eggless Custom Cakes</p>
+    </header>
+
+    <div class="hero">
+      <h2>Celebrate Every Bite!</h2>
+    </div>
+
+    <section>
+      <h2 class="section-title">Our Categories</h2>
+      <div class="categories">
+        <div class="category-card"><h3><a href="bento.html">Bento Cakes</a></h3></div>
+        <div class="category-card"><h3><a href="jar.html">Jar Cakes</a></h3></div>
+        <div class="category-card"><h3>Custom Cakes</h3></div>
+        <div class="category-card"><h3>Pastries</h3></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Featured Products</h2>
+      <div class="products">
+        <div class="product-card">
+          <img src="cake1.jpg" alt="Chocolate Cake">
+          <div class="product-info">
+            <h3>Chocolate Delight</h3>
+            <p>Rich and creamy chocolate layers topped with ganache.</p>
+            <span>₹550</span>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="cake2.jpg" alt="Vanilla Cake">
+          <div class="product-info">
+            <h3>Classic Vanilla</h3>
+            <p>Light, fluffy, and perfect for all occasions.</p>
+            <span>₹500</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <h2>About Us</h2>
+      <p>We’re a home-based bakery in Ghatkopar, Mumbai, run by Soham and Param Haria. We specialize in eggless cakes made with love, customized to your taste and style.</p>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Us</h2>
+      <p>📱 WhatsApp: 7802809774 / 7802803123</p>
+      <p>📩 Instagram: <a href="https://www.instagram.com/tsl_thesweetloaf/" target="_blank">@tsl_thesweetloaf</a></p>
+    </section>
+
+    <footer>
+      <p>© 2025 The Sweet Loaf. All rights reserved.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
