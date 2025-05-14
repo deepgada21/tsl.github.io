@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bento Cakes - The Sweet Loaf</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url('bgimg.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Segoe UI', sans-serif;
+      color: #2d3b2d;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #486e4b;
+      margin-bottom: 1rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .product {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .product img {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .product h3 {
+      color: #486e4b;
+      margin: 0.5rem 0;
+    }
+
+    .product p {
+      font-size: 0.9rem;
+    }
+
+    .product span {
+      font-weight: bold;
+      color: #789f80;
+      display: block;
+      margin-top: 0.5rem;
+    }
+
+    a.back {
+      display: block;
+      margin-top: 2rem;
+      text-align: center;
+      color: #486e4b;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bento Cakes</h1>
+    <div class="product-grid">
+      <div class="product">
+        <img src="bento1.jpg" alt="Bento Cake 1">
+        <h3>Floral Bento</h3>
+        <p>Beautifully piped flowers on a mini cake.</p>
+        <span>₹300</span>
+      </div>
+      <div class="product">
+        <img src="bento2.jpg" alt="Bento Cake 2">
+        <h3>Minimalist Bento</h3>
+        <p>Elegant design with a custom message.</p>
+        <span>₹320</span>
+      </div>
+    </div>
+    <a class="back" href="tsl.html">← Back to Home</a>
+  </div>
+</body>
+</html>

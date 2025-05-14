@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jar Cakes - The Sweet Loaf</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url('bgimg.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Segoe UI', sans-serif;
+      color: #2d3b2d;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #486e4b;
+      margin-bottom: 1rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .product {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .product img {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .product h3 {
+      color: #486e4b;
+      margin: 0.5rem 0;
+    }
+
+    .product p {
+      font-size: 0.9rem;
+    }
+
+    .product span {
+      font-weight: bold;
+      color: #789f80;
+      display: block;
+      margin-top: 0.5rem;
+    }
+
+    a.back {
+      display: block;
+      margin-top: 2rem;
+      text-align: center;
+      color: #486e4b;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Jar Cakes</h1>
+    <div class="product-grid">
+      <div class="product">
+        <img src="jar1.jpg" alt="Jar Cake 1">
+        <h3>Choco Jar</h3>
+        <p>Rich chocolate layers in a handy jar.</p>
+        <span>₹180</span>
+      </div>
+      <div class="product">
+        <img src="jar2.jpg" alt="Jar Cake 2">
+        <h3>Strawberry Jar</h3>
+        <p>Fresh strawberry compote with cream layers.</p>
+        <span>₹200</span>
+      </div>
+    </div>
+    <a class="back" href="tsl.html">← Back to Home</a>
+  </div>
+</body>
+</html>
